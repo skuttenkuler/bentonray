@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'pb';
+    src: url('../assets/Fonts/PinkBlue.woff') format('woff'),
+         url('../assets/Fonts/PinkBlue.otf') format('otf'),
+         url('../assets/Fonts/PinkBlue.ttf') format('ttf');
+}
+
+.color {
+    color: #82ccf3,
+            #efc66a,
+            #d9a5cb,
+            #C49ECF,
+            #9996CB;
+
+}
+
+
+.contact_body{
+    background-image: url('../images/BenBW.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: scroll;
+    padding-top:160px;
+    height: 100vh;
+
+
+
+}
+
+.contact_container {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 40px;
+
+
+
+}
+
+.contact_content {
+    text-align: center;
+    margin-top: 100px;
+    background-color: rgba(130, 204, 243, .5);
+    border-radius: 25px;
+    margin-left: 650px;
+    height: 500px;
+    width: 500px;
+    justify-content: center;
+    padding-top: 100px;
+
+}
+.contact_button {
+    border-radius: 20px;
+    background-color: #d9a5cb;
+    height: 40px;
+    width: 150px;
+}
+h1 {
+    font-family: 'pb';
+    padding-top: 15px;
+    font-size: 400%;
+    color: #C49ECF;
+    text-shadow: 4px 4px #000
+}
+.contact_content input[type=text],input[type=email], select, textarea {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    height: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    margin-left: 65px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit] {
+    font-family: 'pb';
+    background-color: #9996CB;
+    color: #efc66a;
+    font-size: 200%;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-shadow: 1px 1px #000;
+}
+input[type=submit]:hover {
+    background-color: #d9a5cb;
+}
+.label{
+    font-family: 'Sriracha', cursive;
+    font-size: 150%;
+    color: #efc66a;
+}
+
+@media (max-width: 768px) {
+    .contact_body{
+        background-image: url('../images/BenBW.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: center;
+        overflow: hidden;
+        padding-top:160px;
+        height: 100vh;
+        bottom: 0;
+        }
+
+    .contact_content {
+            margin-right: 650px;
+            text-align: center;
+            margin-top: 40px;
+            background-color: rgba(130, 204, 243, .5);
+            border-radius: 25px;
+            margin-left: 25px;
+            height: 90%;
+            width: 90%;
+            justify-content: center;
+        }
+        h1 {
+            font-family: 'pb';
+            padding-top: 15px;
+            font-size: 400%;
+            color: #C49ECF;
+            text-shadow: 4px 4px #000
+        }
+        .contact_content input[type=text],input[type=email], select, textarea {
+            display: flex;
+            justify-content: center;
+            width: 75%;
+            height: 75%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-left: 45px;
+
+            resize: vertical;
+        }
+        /* input[type=submit] {
+            font-family: 'pb';
+            background-color: #9996CB;
+            color: #efc66a;
+            font-size: 200%;
+            padding: 5px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-shadow: 1px 1px #000;
+        } */
+
+}

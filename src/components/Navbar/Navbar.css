@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'pb';
+    src: url('../assets/Fonts/PinkBlue.woff') format('woff'),
+         url('../assets/Fonts/PinkBlue.otf') format('otf'),
+         url('../assets/Fonts/PinkBlue.ttf') format('ttf');
+}
+.color {
+    color: #82ccf3,
+            #efc66a,
+            #d9a5cb,
+            #C49ECF,
+            #9996CB;
+
+}
+
+
+.navbar_nav {
+    top: 100px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background-color: #efc66a;
+    z-index: 5;
+
+
+}
+
+.navbar_items{
+    font-size: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.navbar_items ul {
+    list-style: none;
+    margin: 0;
+    padding: 1;
+    display: flex;
+    align-items: center;
+}
+.navbar_items li {
+    margin: 0 5rem;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    line-height: 40px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+.navbar_items h2 {
+    font-family: 'pb' !important;
+    font-size: 115%;
+    color: #d9a5cb;
+    text-shadow: .75px .75px #3d6ccc;
+
+
+}
+
+@media (max-width: 768px) {
+    .navbar_nav{
+        display: none;
+    }
+    }

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
+@font-face{
+    font-family: 'Baloo Chettan', cursive;
+    src: url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
+}
+.color {
+    color: #82ccf3,
+            #efc66a,
+            #d9a5cb,
+            #C49ECF,
+            #9996CB;
+
+}
+
+.bio_body{
+        background-image: url('../images/heads.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: scroll;
+        padding-top:160px;
+        height: 100vh;
+
+
+
+}
+
+.bio_container {
+    text-align: center;
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    background-color:#82ccf3;
+    opacity: .98;
+    border-radius: 25px;
+    height: 525px;
+    width: 700px;
+}
+
+.bio_content {
+    padding: 10px 5px 10px 5px;
+
+}
+.bio_content p {
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 150%;
+    padding: 5px;
+    text-indent: 2em;
+    color: #fcd9f9;
+    text-shadow: .75px .75px #474747;
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+
+
+}
+@media (max-width: 768px) {
+    .bio_container {
+        text-align: center;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color:#82ccf3;
+        opacity: .98;
+        border-radius: 25px;
+        height: 1200px;
+        width: 85%;
+    }
+    .bio_content {
+        margin-bottom: 5px;
+
+    }
+    }

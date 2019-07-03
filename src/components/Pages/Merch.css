@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'pb';
+    src: url('../assets/Fonts/PinkBlue.woff') format('woff'),
+        url('../assets/Fonts/PinkBlue.otf') format('otf'),
+        url('../assets/Fonts/PinkBlue.ttf') format('ttf');
+}
+
+.color {
+    color: #82ccf3,
+        #efc66a,
+        #d9a5cb,
+        #C49ECF,
+        #9996CB;
+
+}
+
+
+.merch_body {
+        background-color: #fb9400;
+        overflow: scroll;
+        padding-top:160px;
+        height: 100vh;
+
+
+
+}
+
+.merch_container h1 {
+    text-align: center;
+    margin: auto;
+    padding-top: 20rem;
+    font-family: 'pb';
+    color: #82ccf3;
+    font-size: 700%;
+    text-shadow: 5px 5px #000
+}
+@media (max-width: 768px) {
+    .merch_container h1 {
+        font-size: 80px;
+        padding-top: 2rem;
+    }
+    }

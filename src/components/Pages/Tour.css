@@ -1,0 +1,20 @@
+.tour_body{
+    background-color: aqua;
+    overflow: scroll;
+    padding-top:160px;
+    height: 100vh;
+}
+.tour_content {
+    height: 100%;
+    width: 75%;
+    text-align: center;
+    margin: auto;
+
+}
+
+@media (max-width: 768px) {
+    .tour_content{
+        width: 10px;
+        padding-right: 300px;
+    }
+    }

@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'pb';
+    src: url('../assets/Fonts/PinkBlue.woff') format('woff'),
+         url('../assets/Fonts/PinkBlue.otf') format('otf'),
+         url('../assets/Fonts/PinkBlue.ttf') format('ttf');
+}
+@font-face{
+    font-family: 'Sriracha', cursive;
+    src: url('https://fonts.googleapis.com/css?family=Sriracha');
+}
+.color {
+    color: #82ccf3,
+            #efc66a,
+            #d9a5cb,
+            #C49ECF,
+            #9996CB;
+
+}
+
+
+.home {
+    background-image: url('../images/BentenWall.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    overflow: hidden;
+    padding-top:160px;
+    height: 100vh;
+    bottom: 0;
+
+}
+.container {
+    padding-top: 1rem;
+    overflow: scroll, hidden;
+    height: 100%;
+    width: 100%;
+
+}
+
+.header_bg{
+    padding-right: 100px;
+
+}
+h2{
+    font-family: 'pb';
+    width: 100%;
+    font-size: 600%;
+    color: #fa3949ab;
+    text-shadow: 3px 3px rgb(36, 39, 255);
+
+}
+.h2-1{
+    margin-top: 100px;
+    margin-left:100px;
+}
+.h2-2{
+    margin-left:250px;
+}
+.h2-3{
+    margin-left:400px;
+}
+.foot{
+    position:flex;
+    color: white;
+    margin-left: 0px;
+    margin-top:-20px;
+
+}
+
+@media (max-width: 768px) {
+    .home {
+        background-image: url('../images/BentenWall.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: center;
+        overflow: hidden;
+        padding-top:160px;
+        height: 100vh;
+        bottom: 0;
+        margin-left: -700px;
+
+    }
+    h2{
+        font-family: 'pb';
+        display: flex;
+        width: 100%;
+        font-size: 500%;
+        color: #fa3949ab;
+        text-shadow: 3px 3px rgb(36, 39, 255);
+        justify-content: center;
+
+    }
+    .container {
+        padding-top: 1rem;
+        overflow: scroll, hidden;
+        height: 50%;
+        width: 50%;
+        justify-content: center;
+
+    }
+    .h2-1{
+    margin-top: -70px;
+    margin-left: 350px;
+    }
+    .h2-2{
+    margin-top: -15px;
+    margin-left:350px;
+    }
+    .h2-3{
+    margin-top: -20px;
+    margin-left:350px;
+    }
+
+
+}
