@@ -45,7 +45,7 @@
     height: 500px;
     width: 500px;
     justify-content: center;
-    padding-top: 100px;
+
 
 }
 .contact_button {
@@ -58,8 +58,8 @@ h1 {
     font-family: 'pb';
     padding-top: 15px;
     font-size: 400%;
-    color: #C49ECF;
-    text-shadow: 4px 4px #000
+    color: #efc66a;
+    text-shadow: 2px 1px #C49ECF
 }
 .contact_content input[type=text],input[type=email], select, textarea {
     display: flex;
@@ -75,6 +75,9 @@ h1 {
     margin-bottom: 16px;
     resize: vertical;
 }
+.phone{
+    justify-content: center;
+}
 input[type=submit] {
     font-family: 'pb';
     background-color: #9996CB;
@@ -84,7 +87,7 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    text-shadow: 1px 1px #000;
+    text-shadow: 1px 1px #82ccf3;
 }
 input[type=submit]:hover {
     background-color: #d9a5cb;
