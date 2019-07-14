@@ -7,7 +7,7 @@ export default class Contact extends Component {
         componentDidMount() {
         function submitToAPI(e) {
             e.preventDefault();
-            var URL = "https://btc3jl16yg.execute-api.us-west-2.amazonaws.com/Initial";
+            var URL = "https://9bcvv8x70l.execute-api.us-west-2.amazonaws.com/Production";
 
              var Namere = /[A-Za-z]{1}[A-Za-z]/;
              if (!Namere.test($("#name-input").val())) {
@@ -23,7 +23,7 @@ export default class Contact extends Component {
                  alert ("Please enter your email id");
                  return;
              }
-            }
+        }
         }
 
         render() {
@@ -31,7 +31,6 @@ export default class Contact extends Component {
             <div className="contact_body">
                 <div className="contact_container">
                     <div className="contact_content">
-                    <html>
                     <form id="contact-form" method="post">
                         <h1>Contact Me</h1>
                         <div className="form-group">
@@ -50,7 +49,6 @@ export default class Contact extends Component {
                                 <input type="submit" onClick="submitToAPI(event)" value="submit"/>
                             </div>
                         </form>
-                    </html>
 
                     </div>
                 </div>
