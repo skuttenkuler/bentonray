@@ -61,7 +61,7 @@ h1 {
     color: #efc66a;
     text-shadow: 2px 1px #C49ECF
 }
-.contact_content input[type=text],input[type=email], select, textarea {
+.contact_content input[type=text],input[type=email],input[type=phone],textarea[type=message], select, textarea {
     display: flex;
     justify-content: center;
     width: 75%;
@@ -77,6 +77,7 @@ h1 {
 }
 .phone{
     justify-content: center;
+
 }
 input[type=submit] {
     font-family: 'pb';

@@ -8,7 +8,7 @@ export default class Bio extends Component{
             <div className='bio_body'>
                 <div className='bio_container'>
                     <div className='bio_content'>
-                        <p id="indent">    Benton Ray is a small town boy turned standup comedian, actor, and writer based in Los Angeles, CA.
+                        <p id="indent">    Benton Ray is a small town boy from Nashville, TN turned standup comedian, actor, and writer based in Los Angeles, CA.
                         He is known for his honest and charmingly cute, hateful-best-friend approach to comedy. His standup as
                         been described as dynamic, sharp, edgy, and relatable. Benton's comedic style keeps audiences engaged, as
                         he fully embraces what it means to be a live entertainer, using the full stage and physical elements to

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-
+//import '../loader.js';
 
 import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
