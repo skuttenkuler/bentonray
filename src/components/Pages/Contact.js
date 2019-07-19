@@ -6,11 +6,17 @@ import $ from "jquery";
 export default class Contact extends Component {
     constructor(props) {
         super(props);
+        this.state  = { name : '',
+                        email: '',
+                        phone: '',
+                        description: '',
+
+                        }
         this.submitToAPI = this.submitToAPI.bind(this);
     }
         submitToAPI(event) {
             event.preventDefault();
-            var URL = "https://9bcvv8x70l.execute-api.us-west-2.amazonaws.com/Production";
+            var URL = "https://rq2yftpqt4.execute-api.us-west-2.amazonaws.com/Prod";
 
              var Namere = /[A-Za-z]{1}[A-Za-z]/;
              if (!Namere.test($("#name-input").val())) {
@@ -26,8 +32,36 @@ export default class Contact extends Component {
                  alert ("Please enter your email");
                  return;
              }
-        }
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var phone = $("#phone").val();
+            var description = $("#description").val();
+            var data = {
+                name : name,
+                email : email,
+                phone : phone,
+                desc : description
+            };
 
+            $.ajax({
+                type: "POST",
+                url : "https://rq2yftpqt4.execute-api.us-west-2.amazonaws.com/Prod",
+                dataType : "json",
+                crossDomain: "true",
+                contentType: "application/json; charset=utf-8",
+                data : JSON.stringify(data),
+
+                success: function () {
+                    alert('Thank you '+ this.state.name + '!');
+                    document.getElementById("contact-form").requestFullscreen();
+                Contact.reload();
+                },
+                error: function () {
+                    alert("something went wrong...");
+                }
+            });
+
+        }
 
 
         render() {
@@ -35,22 +69,48 @@ export default class Contact extends Component {
             <div className="contact_body">
                 <div className="contact_container">
                     <div className="contact_content">
-                    <form id="contact-form"  onSubmit={this.submitToAPI} method="POST">
+                    <form id="contact-form"  onSubmit={this.state.submitToAPI} method="POST">
                         <h1>Contact Me</h1>
                         <div className="form-group">
                             <label className="label">Name:</label>
-                                <input type= "text"  className="form-control" id="name-input" placeholder="First name.." required/>
+                                <input type= "text"
+                                        className="form-control"
+                                        id="name-input"
+                                        placeholder="First name.."
+                                        value={this.state.name}
+                                        onChange={e => this.setState({ name: e.target.value})} required/>
 
                             <label className="label">Email:</label>
-                                <input type="email" className="form-control" id="email-input"name="email"placeholder="Your email.." required/>
+                                <input type="email"
+                                        className="form-control"
+                                        id="email-input"
+                                        name="email"
+                                        placeholder="Your email.."
+                                        value={this.state.email}
+                                        onChange={e => this.setState({ email: e.target.value})}
+                                        required/>
 
                             <label className="label">Phone:</label><br></br>
-                                <input className="phone" type="phone" className="form-control" id="phone-input"name="phone"placeholder="Your phone number.." required/>
+                                <input className="phone"
+                                        type="phone"
+                                        id="phone-input"
+                                        name="phone"
+                                        placeholder="Your phone number.."
+                                        value={this.state.phone}
+                                        onChange={e => this.setState({ phone: e.target.value})}
+                                        required/>
                                     <br></br>
                                 <label className="label">Message:</label>
-                                <textarea type="message" className="form-control"  id="description-input" name="content" placeholder="Write something.." required>
+                                <textarea type="message"
+                                        className="form-control"
+                                        id="description-input"
+                                        name="content"
+                                        placeholder="Write something.."
+                                        value={this.state.description}
+                                        onChange={e => this.setState({ description: e.target.value})}
+                                        required>
                                 </textarea><br></br>
-                                <input type="submit" onClick="submitToAPI(event)"value="submit"/>
+                                <input type="submit" onClick={e => this.submitToAPI(e)} value="submit"/>
                             </div>
                         </form>
 
