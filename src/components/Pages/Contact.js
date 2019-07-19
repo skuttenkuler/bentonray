@@ -4,14 +4,17 @@ import $ from "jquery";
 
 //import './emailForm.html'
 export default class Contact extends Component {
-        componentDidMount() {
-        function submitToAPI(e) {
-            e.preventDefault();
+    constructor(props) {
+        super(props);
+        this.submitToAPI = this.submitToAPI.bind(this);
+    }
+        submitToAPI(event) {
+            event.preventDefault();
             var URL = "https://9bcvv8x70l.execute-api.us-west-2.amazonaws.com/Production";
 
              var Namere = /[A-Za-z]{1}[A-Za-z]/;
              if (!Namere.test($("#name-input").val())) {
-                          alert ("Name can not less than 2 char");
+                          alert ("Please enter your name");
                  return;
              }
              var mobilere = /[0-9]{10}/;
@@ -20,33 +23,34 @@ export default class Contact extends Component {
                  return;
              }
              if ($("#email-input").val()=="") {
-                 alert ("Please enter your email id");
+                 alert ("Please enter your email");
                  return;
              }
         }
-        }
+
+
 
         render() {
         return (
             <div className="contact_body">
                 <div className="contact_container">
                     <div className="contact_content">
-                    <form id="contact-form" method="post">
+                    <form id="contact-form"  onSubmit={this.submitToAPI} method="POST">
                         <h1>Contact Me</h1>
                         <div className="form-group">
                             <label className="label">Name:</label>
-                                <input type= "text" id="name-input" placeholder="First name.." class="form-control" required/>
+                                <input type= "text"  className="form-control" id="name-input" placeholder="First name.." required/>
 
                             <label className="label">Email:</label>
-                                <input type="email"id="email-input"name="email"placeholder="Your email.." class="form-control" required/>
+                                <input type="email" className="form-control" id="email-input"name="email"placeholder="Your email.." required/>
 
                             <label className="label">Phone:</label><br></br>
-                                <input className="phone" type="phone"id="phone-input"name="phone"placeholder="Your phone number.." class="form-control" required/>
-                                    <br></br><br></br>
-                                <label className="label">Message:</label><br></br>
-                                <textarea type="message" id="description-input" name="content" placeholder="Write something.." class="form-control" required>
-                                </textarea>
-                                <input type="submit" onClick="submitToAPI(event)" value="submit"/>
+                                <input className="phone" type="phone" className="form-control" id="phone-input"name="phone"placeholder="Your phone number.." required/>
+                                    <br></br>
+                                <label className="label">Message:</label>
+                                <textarea type="message" className="form-control"  id="description-input" name="content" placeholder="Write something.." required>
+                                </textarea><br></br>
+                                <input type="submit" onClick="submitToAPI(event)"value="submit"/>
                             </div>
                         </form>
 
