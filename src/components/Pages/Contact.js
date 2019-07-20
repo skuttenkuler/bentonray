@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Contact.css'
 import $ from "jquery";
 
-//import './emailForm.html'
+
 export default class Contact extends Component {
     constructor(props) {
         super(props);
@@ -16,7 +16,7 @@ export default class Contact extends Component {
     }
         submitToAPI(event) {
             event.preventDefault();
-            var URL = "https://rq2yftpqt4.execute-api.us-west-2.amazonaws.com/Prod";
+            var URL = "";
 
              var Namere = /[A-Za-z]{1}[A-Za-z]/;
              if (!Namere.test($("#name-input").val())) {
@@ -45,7 +45,7 @@ export default class Contact extends Component {
 
             $.ajax({
                 type: "POST",
-                url : "https://rq2yftpqt4.execute-api.us-west-2.amazonaws.com/Prod",
+                url : "",
                 dataType : "json",
                 crossDomain: "true",
                 contentType: "application/json; charset=utf-8",
