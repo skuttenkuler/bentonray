@@ -16,7 +16,7 @@ export default class Contact extends Component {
     }
         submitToAPI(event) {
             event.preventDefault();
-            const url = "https://rq2yftpqt4.execute-api.us-west-2.amazonaws.com/Prod";
+            const url = "";
             const { name, email, phone, description } = this.state;
 
              const nameRe = /[A-Za-z]{1}[A-Za-z]/;
