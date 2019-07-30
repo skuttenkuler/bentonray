@@ -6,7 +6,7 @@ class Tour extends Component {
     componentDidMount () {
         const script = document.createElement("script");
 
-        script.src = "";
+        script.src = "https://widget.bandsintown.com/main.min.js";
         script.async = true;
 
         document.body.appendChild(script);

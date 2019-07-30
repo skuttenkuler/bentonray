@@ -16,7 +16,7 @@ export default class Contact extends Component {
     }
         submitToAPI(event) {
             event.preventDefault();
-            const url = "https://rq2yftpqt4.execute-api.us-west-2.amazonaws.com/Prod";
+            const url = "https://rq2yftpqt4.execute-api.us-west-2.amazonaws.com/Prod/contact-us";
             const { name, email, phone, description } = this.state;
 
              const nameRe = /[A-Za-z]{1}[A-Za-z]/;
@@ -49,7 +49,7 @@ export default class Contact extends Component {
                 data : JSON.stringify(data),
 
                 success: function () {
-                    alert('Thank you '+ this.state.name + '!');
+                    alert('Thank you '+ data.name + '!');
                 },
                 error: function () {
                     alert("something went wrong...");
