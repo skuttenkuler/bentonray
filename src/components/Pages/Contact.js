@@ -8,7 +8,6 @@ export default class Contact extends Component {
         super(props);
         this.state  = { name : "",
                         email: "",
-                        phone: "",
                         description: "",
 
                         }
@@ -17,16 +16,11 @@ export default class Contact extends Component {
         submitToAPI(event) {
             event.preventDefault();
             const url = "https://rq2yftpqt4.execute-api.us-west-2.amazonaws.com/Prod/contact-us";
-            const { name, email, phone, description } = this.state;
+            const { name, email, description } = this.state;
 
              const nameRe = /[A-Za-z]{1}[A-Za-z]/;
              if (!nameRe.test(name)) {
                           alert ("Please enter your name");
-                 return;
-             }
-             const mobileRe = /[0-9]{10}/;
-             if (!mobileRe.test(phone)) {
-                 alert ("Please enter valid mobile number");
                  return;
              }
              if (!email) {
@@ -36,7 +30,6 @@ export default class Contact extends Component {
             const data = {
                 name : name,
                 email : email,
-                phone : phone,
                 description : description
             };
 
@@ -50,6 +43,7 @@ export default class Contact extends Component {
 
                 success: function () {
                     alert('Thank you '+ data.name + '!');
+
                 },
                 error: function () {
                     alert("something went wrong...");
@@ -86,15 +80,6 @@ export default class Contact extends Component {
                                         onChange={e => this.setState({ email: e.target.value})}
                                         required/>
 
-                            <label className="label">Phone:</label><br></br>
-                                <input className="phone"
-                                        type="phone"
-                                        id="phone-input"
-                                        name="phone"
-                                        placeholder="Your phone number.."
-                                        value={phone}
-                                        onChange={e => this.setState({ phone: e.target.value})}
-                                        required/>
                                     <br></br>
                                 <label className="label">Message:</label>
                                 <textarea type="message"
