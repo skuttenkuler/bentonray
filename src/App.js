@@ -49,7 +49,7 @@ class App extends Component {
                 <Route path="/Bio" component={Bio}/>
                 <Route path="/Merch" component={Merch}/>
                 <Route path="/Tour" component={Tour}/>
-                <Route path="/Contact" component={Contact}/>
+                {/* <Route path="/Contact" component={Contact}/> */}
 
             </Switch>
           </Router>

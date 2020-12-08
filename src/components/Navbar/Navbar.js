@@ -15,7 +15,7 @@ const Navbar = (props) => (
                             <li><Link to="/Bio" style={{ textDecoration: 'none' }}><h2>About</h2></Link></li>
                             <li><Link to="/Tour" style={{ textDecoration: 'none' }}><h2>Shows</h2></Link></li>
                             <li><Link to="/Merch" style={{ textDecoration: 'none' }}><h2>Merch</h2></Link></li>
-                            <li><Link to="/Contact" style={{ textDecoration: 'none' }}><h2>Contact</h2></Link></li>
+                            {/* <li><Link to="/Contact" style={{ textDecoration: 'none' }}><h2>Contact</h2></Link></li> */}
                         </ul>
                     </div>
                 </nav>
